@@ -120,7 +120,10 @@ name: "ModuleTable",
     // axios.post('https://api.coindesk.com/v1/bpi/currentprice.json',{
     //   body:this.optionList
     // })
-      console.log(this.optionList)
+      if (this.optionList.length){
+        console.log(this.optionList)
+      }
+
     },
     setAvailableValues(){
       function comparer(otherArray){
