@@ -40,7 +40,7 @@
 <script>
 import {mapGetters} from 'vuex'
 import vSelect from 'vue-select'
-import axios from "axios";
+// import axios from "axios";
 
 export default {
 name: "ModuleTable",
@@ -117,9 +117,10 @@ name: "ModuleTable",
     },
     submitForm(){
       // Test request
-    axios.post('https://api.coindesk.com/v1/bpi/currentprice.json',{
-      body:this.optionList
-    })
+    // axios.post('https://api.coindesk.com/v1/bpi/currentprice.json',{
+    //   body:this.optionList
+    // })
+      console.log(this.optionList)
     },
     setAvailableValues(){
       function comparer(otherArray){
@@ -218,7 +219,7 @@ name: "ModuleTable",
     align-items: center;
   }
 }
-@media (max-width: 400px){
+@media (max-width: 420px){
   .table__item-select{
     max-width: 200px;
   }
