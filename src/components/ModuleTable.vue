@@ -15,6 +15,7 @@
                         v-model="selected[`${index}`]"
                         :value="selectedValue"
                         @input="setSelected(index,selected[`${index}`])"
+                        :clearable="false"
                         :options="availableValues ? availableValues : options"
               />
             </div>
@@ -123,7 +124,6 @@ name: "ModuleTable",
       if (this.optionList.length){
         console.log(this.optionList)
       }
-
     },
     setAvailableValues(){
       function comparer(otherArray){
